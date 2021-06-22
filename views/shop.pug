@@ -1,0 +1,15 @@
+extends layouts/main-layout.pug
+
+block styles 
+
+block content 
+     main 
+            if prods.length > 0 
+                each product in prods
+                    .card
+                        img(src="https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80", alt="Denim Jeans", style="width:100%")
+                        h1 #{product.title}
+                        p Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.
+            
+            else 
+                h1 No Products
